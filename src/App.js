@@ -10,7 +10,7 @@ import GlobalStyles from "./styles/global";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -19,6 +19,6 @@ function App() {
       </ThemeProvider>
     </Provider>
   );
-}
+};
 
 export default App;
