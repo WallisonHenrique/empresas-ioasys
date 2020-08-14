@@ -7,6 +7,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 610px) {
+    height: 100%;
+  }
 `;
 
 export const Logo = styled.img`
@@ -22,7 +26,7 @@ export const Wrapper = styled.div`
     width: 340px;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 610px) {
     padding: 30px;
   }
 `;
@@ -31,8 +35,7 @@ export const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-top: 32px;
-  margin-bottom: 26px;
+  margin: 20px 0;
   width: 250px;
 
   @media (min-width: 768px) {
@@ -104,10 +107,15 @@ export const FieldInput = styled.div`
     border-bottom: 1px solid;
     border-bottom-color: ${({ invalid }) => (invalid ? "#ff0f44" : "#383743")};
   }
+
+  @media (max-width: 425px) {
+    margin-top: 20px;
+  }
 `;
 
 export const VisibilityPassword = styled.button`
   background-image: url(${imgVisibility});
+  background-color: inherit;
   background-size: cover;
   border: none;
   height: 26px;
@@ -121,6 +129,12 @@ export const Warning = styled.p`
   color: #ff0f44;
   font-size: 12px;
   height: 18px;
-  margin-top: 16px;
-  text-align: center;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 610px) {
+    height: 34px;
+  }
 `;

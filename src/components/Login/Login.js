@@ -24,7 +24,6 @@ export const Login = withRouter(
           .catch(err => {
             const errorMessage =
               "Credenciais informadas são inválidas, tente novamente.";
-            this.props.setLoading(false);
             return this.setState({
               errorMessage: errorMessage,
               loading: false
