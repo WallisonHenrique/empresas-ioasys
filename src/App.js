@@ -1,11 +1,11 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { ThemeProvider } from "styled-components";
 
-import theme from "./styles/theme";
-import store from "./store";
+import { store } from "./store";
 
-import Routes from "./utils/routes";
+import { Routes } from "./utils/routes";
+import LoginProvider from "./components/Login/LoginProvider";
+
 import GlobalStyles from "./styles/global";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,10 +13,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
+      <GlobalStyles />
+      <LoginProvider>
         <Routes />
-      </ThemeProvider>
+      </LoginProvider>
     </Provider>
   );
 };
